@@ -1,0 +1,18 @@
+manifest:
+  self:
+    path: zephyr-rtosbench
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: rtosbench
+      url-base: https://github.com/methodpark
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: v2.6-branch
+      import: true
+    - name: RTOSBench
+      path: zephyr-rtosbench/app/lib/rtosbench
+      remote: rtosbench
