@@ -19,7 +19,7 @@ west update
 ## Building and Running
 
 The test cases can be build by running `west build -b $BOARD -s app`. Here
-`$BOARD` is has to be replaced with the target board. After building, the
+`$BOARD` has to be replaced with the target board. After building, the
 respective test case can be executed on hardware by running `west flash` or
 `west build -t run`.  Results can be read by attaching to the board's serial
 output (e.g. `cat /dev/ttyACM0`).
@@ -60,9 +60,9 @@ The example above runs a test 10000 times.
 
 # Tracing
 
-Zephyr offers builtin support for tracing in various format. The repository
-contains two configuration files that activates all necessary KConfig options
-for either SEGGER SystemView or via UART using the Common Tracing Format (CTF).
+Zephyr offers builtin support for tracing in various formats. The repository
+contains two configuration files that activate all necessary KConfig options for
+either SEGGER SystemView or via UART using the Common Tracing Format (CTF).
 
 The benchmark code automatically inserts a delay of 5 seconds before the
 benchmark actually starts. This way you should be able to start capturing
