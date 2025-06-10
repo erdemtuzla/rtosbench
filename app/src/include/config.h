@@ -1,10 +1,10 @@
 #ifndef _CONFIG_H_
 #define _CONFIG_H_
 /* This header must always be included first */
-#include <zephyr.h>
+#include <zephyr/kernel.h>
 
-#include <timing/timing.h>
-#include <sys/printk.h>
+#include <zephyr/timing/timing.h>
+#include <zephyr/sys/printk.h>
 
 #ifndef BASE_PRIO
 #define BASE_PRIO 10

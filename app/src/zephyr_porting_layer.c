@@ -1,7 +1,7 @@
-#include <sys/__assert.h>
-#include <sys/printk.h>
-#include <zephyr.h>
-#include <timing/timing.h>
+#include <zephyr/sys/__assert.h>
+#include <zephyr/sys/printk.h>
+#include <zephyr/kernel.h>
+#include <zephyr/timing/timing.h>
 
 #include "porting_layer.h"
 #include "nvic.h"
@@ -111,16 +111,14 @@ no_task_resume(no_task_handle_t task)
 void
 no_task_delay(unsigned int milliseconds)
 {
-	int32_t ms = (int32_t)milliseconds;
-	do {
-		ms = k_msleep(ms);
-	} while(ms > 0);
+	k_msleep(milliseconds);
 }
 
 no_time_t
 no_time_get()
 {
-	return (timing_counter_get());
+	// return (timing_counter_get());
+	return (no_time_t)DWT->CYCCNT;
 }
 
 no_time_t
