@@ -11,7 +11,7 @@ you can clone the project using Zephyr's metatool `west`. The following shell
 commands initialize the project in a workspace directory named `my-workspace`:
 
 ```shell
-west init -m https://github.com/methodpark/zephyr-rtosbench my-workspace
+west init -m https://github.com/erdemtuzla/zephyr-rtosbench my-workspace
 cd my-workspace
 west update
 ```

@@ -11,7 +11,7 @@ manifest:
   projects:
     - name: zephyr
       remote: zephyrproject-rtos
-      revision: zephyr-v3.1.0
+      revision: v4.1.0
       import: true
     - name: RTOSBench
       path: zephyr-rtosbench/app/lib/rtosbench
