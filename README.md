@@ -2,6 +2,8 @@
 
 This repository contains a Zephyr application that executes benchmarks from
 [RTOSBench](https://github.com/gchamp20/RTOSBench).
+Also it is forked from [Zephyr-RTOSbench](https://github.com/methodpark/zephyr-rtosbench) and updated for
+version v4.1.0 of Zephyr
 
 ## Getting Started
 
@@ -20,9 +22,9 @@ west update
 
 The test cases can be build by running `west build -b $BOARD -s app`. Here
 `$BOARD` has to be replaced with the target board. After building, the
-respective test case can be executed on hardware by running `west flash` or
-`west build -t run`.  Results can be read by attaching to the board's serial
-output (e.g. `cat /dev/ttyACM0`).
+respective test case can be executed on hardware by running `west flash`. 
+Results can be read by attaching to the board's serial
+output by using minicom or any other tool.
 
 ## Changing the Test Case
 
